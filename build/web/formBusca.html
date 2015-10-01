@@ -1,0 +1,8 @@
+<form action="AcaoLivro" method="post">
+  <input type="hidden" value="buscar" id="acao" name="acao"/> 
+  <input type="text" value="Buscar..." name="searchfield" id="searchfield" size="100" title="Informe o que deseja buscar" onfocus="EmptyField(this.id);" onblur="EmptyField2(this.id);" />
+  <input type="submit" name="Search" value="Buscar" alt="Search" id="searchbutton" title="Buscar" />
+  <input style="margin: 10px 0 0 10px;" type="radio" value="titulo" name="tipoBusca" CHECKED/><label> T&iacute;tulo</label>
+  <input style="margin: 10px 0 0 40px;" type="radio" value="autor" name="tipoBusca"/><label> Autor</label>
+  <input style="margin: 10px 0 0 40px;" type="radio" value="assunto" name="tipoBusca"/><label> Assunto</label>
+</form>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="css/images/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <script type="text/javascript" src="js/funcoes.js"></script>
+  </head>
+  <body>
+    <div id="cadastro">
+      <h1 style="text-align: center"><a href="#">XôLer</a></h1>
+      <div id="login-admin2">
+        <p><label style="margin-right: 50px">Administrador</label> <form method="get" action="validaLogin" style="text-align: right; margin-top: -20px;" ><input type="submit" value="Sair" onclick="validaLogin" style="font-size: 15px; margin-right: 120px; margin-top: 17px;"/><input type="hidden" name="acao" value="logout"/></form>
+      </div>
+      <br><br><br>
+      <label style="margin-left: 396px; font-size: 24px; color: #73c1e0;">Cadastro de Editora</label><br>
+      <form id="newEditora" method="post" action="AcaoEditora">
+        <table>
+          <tr><td></td><td style="text-align: left; color:#8A8A8A">(<font color="red">*</font>) - Campos obrigatórios.<input type="hidden" name="acao" id="acao" value="adicionar"/></td><td></td></tr>
+          <tr><td class="labelTd">Nome: (<font color="red">*</font>)</td><td><input type="text" name="nome" size="40" id="pNome" value="Informe o nome da editora" onfocus="EmptyField(this.id);" onblur="VerificaPNome(document.getElementById('pNome').value),EmptyField2(this.id)" onkeyup="VerificaPNome(document.getElementById('pNome').value);"/></td><td><div id="alertPNome"></div></td></tr>
+          <tr><td class="labelTd">Endereço: (<font color="red">*</font>)  </td><td><input type="text" name="endereco" size="40" id="endereco" value="Informe o endereço da editora" onfocus="EmptyField(this.id);" onblur="VerificaEndereco(document.getElementById('endereco').value),EmptyField2(this.id)" onkeyup="VerificaEmail(document.getElementById('endereco').value);"/></td><td><div id="alertEndereco"></div></td></tr>
+          <tr><td class="labelTd">Telefone: (<font color="red">*</font>)</td><td><input type="text" name="telefone" size="40" maxlength="20" id="telefone" value="Informe o telefone da editora" onfocus="EmptyField(this.id);" onblur="VerificaTelefone(document.getElementById('telefone').value),EmptyField2(this.id)" onkeyup="VerificaTelefone(document.getElementById('telefone').value);"/></td><td><div id="alertTelefone"></div></td></tr>         
+          <tr><td></td><td colspan="2" style="float: right; width: 280px; padding-top: 5px;"><a href="admin.html">&lt;&lt; Voltar à home</a> <span><input type="submit" value="Cadastrar"></td></tr>
+        </table>
+      </form>
+      <br><br>
+    </div>
+  </body>
+</html>

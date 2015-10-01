@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <servlet>
+        <servlet-name>AcaoUsuario</servlet-name>
+        <servlet-class>control.AcaoUsuario</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AcaoUsuario</servlet-name>
+        <url-pattern>/AcaoUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AcaoEditora</servlet-name>
+        <servlet-class>control.AcaoEditora</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AcaoEditora</servlet-name>
+        <url-pattern>/AcaoEditora</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AcaoLivro</servlet-name>
+        <servlet-class>control.AcaoLivro</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AcaoLivro</servlet-name>
+        <url-pattern>/AcaoLivro</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>validaLogin</servlet-name>
+        <servlet-class>control.validaLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>validaLogin</servlet-name>
+        <url-pattern>/validaLogin</url-pattern>
+    </servlet-mapping>
+
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

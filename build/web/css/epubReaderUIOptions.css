@@ -1,0 +1,124 @@
+.fl-uiOptions-optionPanel .fl-panelBar {
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.fl-uiOptions-optionPanel .fl-toggleButton {
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 0;
+    background-color: white;
+    padding: 5px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.flc-uiOptions-text-controls li,
+.flc-uiOptions-epub-controls li {
+    display: table-cell;
+    vertical-align: top;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.fl-theme-bw .flc-epubReader-progressIndicator-completed {
+    background-color: #000000 !important;
+}
+
+.fl-theme-wb .flc-epubReader-progressIndicator-completed {
+    background-color: #fff !important;
+}
+
+.fl-theme-by .flc-epubReader-progressIndicator-completed {
+    background-color: #000 !important;
+}
+
+.fl-theme-yb .flc-epubReader-progressIndicator-completed {
+    background-color: #ffff00 !important;
+}
+
+.flc-uiOptions-text-controls .fl-slider-input {
+    margin-top: 30px;
+    margin-left: 5px;
+    float: none;
+    vertical-align: text-top;
+    text-align: left;
+}
+
+.flc-font-custom {
+    font-family: arial;
+    font-weight: bold;
+}
+
+.fl-uiOptions-optionPanel ul.fl-tabs {
+    background-color: #333333;
+    color: #fff;
+    margin-top: 0;
+    border-bottom: none;
+    font-size: 16px;
+}
+
+.fl-uiOptions-optionPanel .fl-tabs li a {
+    background-color: #333333;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 0;
+    padding: 0.5em 1em 0.5em 2em !important;
+}
+
+.fl-uiOptions-optionPanel .fl-tabs li {
+    margin-left: 50px;
+}
+
+/* Tab images */
+.fl-uiOptions-optionPanel .fl-tab-text,
+.fl-uiOptions-optionPanel .fl-tab-ebookSetting,
+.fl-uiOptions-optionPanel .fl-tab-links,
+.fl-uiOptions-optionPanel #reset {
+    background-repeat: no-repeat;
+    background-position: 8% 50%;
+}
+
+.fl-uiOptions-optionPanel .fl-tab-text {
+    background-image: url('../images/uio_icon_textanddisplay_defaultInverted_16x16.png');
+}
+
+.fl-uiOptions-optionPanel .fl-tab-ebookSetting {
+    background-image: url('../images/epubReader_icon_ebookSetting_defaultInverted_16x16.png');
+}
+
+.fl-uiOptions-optionPanel .ui-tabs-selected .fl-tab-text {
+    background-image: url('../images/uio_icon_textanddisplay_default_16x16.png');
+}
+
+.fl-uiOptions-optionPanel .ui-tabs-selected .fl-tab-ebookSetting {
+    background-image: url('../images/epubReader_icon_ebookSetting_default_16x16.png');
+}
+
+.fl-uiOptions-optionPanel #reset,
+.fl-uiOptions-optionPanel #save {
+    background-color: #333333;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1px 20px 1px 27px;
+    text-decoration: underline;
+}
+
+.fl-uiOptions-optionPanel #reset {
+    background-image: url('../images/uio_icon_reset_defaultInverted_16x16.png');
+    background-repeat: no-repeat;
+}
+
+.fl-uiOptions-optionPanel #save {
+    background-image: url('../images/uio_icon_save_default_13x13.png');
+    background-repeat: no-repeat;
+}
+
+.flc-padding-top8 {
+    padding-top: 8px;
+}

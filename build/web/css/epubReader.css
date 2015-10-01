@@ -1,0 +1,493 @@
+body {
+ background-color: #000;
+}
+
+.fl-epubReader-container {
+    background-color: #3b3b3b;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+
+.fl-epubReader-bookContainer {
+    position: relative;
+    margin-top: 20px;
+    top: 10px;
+    border: 1px dotted rgb(210, 210, 210);
+    height: 625px;
+    background-color: #FFFFFF;
+    padding: 0;
+    overflow: hidden;
+}
+
+.fl-epubReader-container  a:visited,
+.fl-epubReader-container  a:link {
+    color: rgb(90, 90, 90);
+    text-decoration: none;
+}
+
+.fl-epubReader-container a.selected {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.fl-epubReader-container h1 {
+    line-height: 1em;
+}
+
+.flc-epubReader-chapter-title {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: medium;
+    margin-bottom: 10px;
+}
+
+.fl-epubReader-container .indent {
+    padding-left: 1em;
+}
+
+.flc-epubReader-chapter-StyleElement {
+    top: 50px;
+    width: 750px;
+    /*height: 500px;*/
+    min-height: 500px;
+    position: absolute;
+    padding: 25px;
+    overflow: hidden;
+}
+
+.fl-epubReader-progressIndicator {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 500px;
+    height: 5px;
+    border: 1px solid rgb(200, 200, 200);
+}
+
+.flc-epubReader-progressIndicator-completed {
+    background-color: #000000;
+    height: 5px;
+    width: 0;
+}
+
+.fl-epubReader-container .fl-rounded-corners {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Custom Scrollbar only works for Chrome and Safari */
+
+.fl-epubReader-container ::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+.fl-epubReader-container ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+.fl-epubReader-container ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #CCCCCC;
+    -webkit-box-shadow: inset 0 0 6px #999999;
+}
+
+.fl-epubReader-container ::-webkit-scrollbar-thumb:window-inactive {
+    background: #f5f5f5;
+}
+
+/* Tabs */
+.fl-epubReader-tabsPanel ul.fl-tabs {
+    background-color: #333333;
+    color: #fff;
+    margin-top: 0px;
+    border-bottom: none;
+}
+
+.fl-epubReader-tabsPanel .fl-tabs li a {
+    background-color: #333333;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 0px;
+}
+
+.fl-epubReader-tabsPanel ul.fl-tabs li:first-child a {
+    margin-left: -10px;
+}
+
+.fl-epubReader-tabsPanel .fl-tabs .ui-tabs-selected a {
+    background-color: #fff;
+    color: #000;
+}
+
+/* jQuery UI Tabs styles */
+.fl-epubReader-tabsPanel.ui-tabs {
+    position: relative;
+    zoom: 1;
+    padding: 0px;
+}
+
+/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+.fl-epubReader-tabsPanel.ui-tabs .ui-tabs-panel {
+    display: block;
+    border-width: 0;
+    padding: 0em 0em 1.2em 1.4em;
+    background: #FFFFFF;
+}
+
+.fl-epubReader-tabsPanel.ui-tabs .ui-tabs-hide {
+    display: none !important;
+}
+
+.fl-epubReader-tabsPanel.ui-tabs .ui-tabs-nav {
+    padding: 0px;
+}
+
+.fl-epubReader-tabsPanel.ui-tabs .ui-tabs-nav li {
+    top: 0px;
+    margin: 0px;
+}
+
+.fl-epubReader-tabsPanel.ui-tabs .ui-tabs-nav li a {
+    float: left;
+    padding: 1em 1.5em 1em 3em;
+}
+
+.fl-epubReader-tabsPanel.ui-tabs .ui-state-default {
+    border: none;
+}
+
+.fl-epubReader-tabsPanel.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+    padding-bottom: 0px;
+}
+
+.fl-epubReader-tabsPanel .fl-tabs .ui-corner-top {
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright: 0px;
+}
+
+.fl-epubReader-tabsPanel .fl-tabs .ui-corner-all {
+    -moz-border-radius: 0px;
+}
+
+.fl-epubReader-tabsPanel.ui-widget-content {
+    border: none;
+}
+
+.fl-epubReader-tabsPanel.ui-tabs .ui-widget-header {
+    background: none;
+    border: 0px;
+    background-color: #333333;
+}
+
+.fl-epubReader-tabsPanel.ui-tabs .ui-tabs-panel ul {
+    margin: 0em;
+    padding-top: 1.5em;
+}
+
+.fl-epubReader-navigationContaniner .fl-tab-notes,
+.fl-epubReader-navigationContaniner .fl-tab-bookmarks,
+.fl-epubReader-navigationContaniner .fl-tab-general,
+.fl-epubReader-navigationContaniner .fl-tab-edit {
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+}
+
+.fl-epubReader-tabsPanel .fl-tab-edit {
+    background-image: url('../images/epubReader_icon_edit_defaultInverted_16x16.png');
+}
+
+.fl-epubReader-tabsPanel .ui-tabs-selected .fl-tab-edit {
+    background-image: url('../images/epubReader_icon_edit_default_16x16.png');
+}
+
+.fl-epubReader-tabsPanel .fl-tab-notes {
+    background-image: url('../images/epubReader_icon_notes_defaultInverted_16x16.png');
+}
+
+.fl-epubReader-tabsPanel .ui-tabs-selected .fl-tab-notes {
+    background-image: url('../images/epubReader_icon_notes_default_16x16.png');
+}
+
+.fl-epubReader-tabsPanel .fl-tab-bookmarks {
+    background-image: url('../images/epubReader_icon_bookmarks_defaultInverted_16x16.png');
+}
+
+.fl-epubReader-tabsPanel .ui-tabs-selected .fl-tab-bookmarks {
+    background-image: url('../images/epubReader_icon_bookmarks_default_16x16.png');
+}
+
+.fl-epubReader-tabsPanel .fl-tab-general {
+    background-image: url('../images/epubReader_icon_general_defaultInverted_16x16.png');
+}
+
+.fl-epubReader-tabsPanel .ui-tabs-selected .fl-tab-general {
+    background-image: url('../images/epubReader_icon_general_default_16x16.png.png');
+}
+
+/* dialog */
+/* Following css rules are not inside epubReader container because jQuery UI dialog shift dialog div as a child of body */
+/* TODO Find a way to work around jQuery Dialog issue*/
+.ui-dialog {
+    -moz-border-radius: 0 5px 5px 5px;
+    -webkit-border-radius: 0 5px 5px 5px;
+    -khtml-border-radius: 0 5px 5px 5px;
+    border-radius: 0 5px 5px 5px;
+    border-color: #000;
+    border-width: 1px;
+    border-style: groove;
+    background-color: #FFFFFF;
+    position: absolute;
+    width: 300px;
+    overflow: hidden;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    background-color: #000000;
+    padding: .4em 1em;
+    position: relative;
+    text-align: center;
+}
+
+.ui-dialog .ui-dialog-title {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    margin: .1em 16px .1em 0;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+    position: absolute;
+    right: .3em;
+    top: 50%;
+    width: 19px;
+    margin: -10px 0 0 0;
+    padding: 1px;
+    height: 18px;
+}
+
+.ui-dialog .ui-dialog-titlebar-close span {
+    display: block;
+    margin: 1px;
+}
+
+.ui-dialog .ui-dialog-titlebar-close:hover,
+.ui-dialog .ui-dialog-titlebar-close:focus {
+    padding: 0;
+}
+
+.ui-dialog .ui-dialog-content {
+    position: relative;
+    border: 0;
+    padding: .5em 1em;
+    background: none;
+    overflow: auto;
+    min-height: 0;
+    zoom: 1;
+    text-align: center;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+    text-align: left;
+    border-width: 1px 0 0 0;
+    background-image: none;
+}
+
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+    float: right;
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+    cursor: pointer;
+}
+
+.ui-dialog .ui-resizable-se {
+    width: 14px;
+    height: 14px;
+    right: 3px;
+    bottom: 3px;
+}
+
+.ui-draggable .ui-dialog-titlebar {
+    cursor: move;
+}
+
+.ui-dialog button {
+    color: #FFFFFF;
+    margin: 2px;
+    background-color: #000000;
+}
+
+.fl-epubReader-errorNotification {
+    background-color: #FF0000;
+    color: #FFFFFF;
+}
+
+.fl-epubReader-successNotification {
+    background-color: green;
+    color: #FFFFFF;
+}
+
+.fl-epubReader-infoNotification {
+    background-color: #f5f5f5;
+    color: #000000;
+}
+
+.fl-epubReader-notification {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: groove;
+    font-weight: bold;
+    cursor: pointer;
+    background-image: url("../images/epubReader_notification_background.png");
+    background-repeat: repeat;
+}
+
+.fl-epubReader-navigationContaniner {
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.fl-epubReader-navigationContaniner .fl-epubReader-bookmarkContainer a,
+.fl-epubReader-navigationContaniner .fl-epubReader-notesContainer a {
+    text-decoration: underline !important;
+}
+
+.fl-epubReader-navigationContaniner button {
+    color: #000000;
+    background-color: #f5f5f5;
+}
+
+.fl-epubReader-navigationContaniner button[disabled=disabled] {
+    color: #FFF;
+    background-color: #CCCCCC;
+}
+
+.fl-epubReader-navigationContaniner   li {
+    display: table-cell;
+    vertical-align: middle;
+    float: left;
+    padding-left: 15px;
+}
+
+.fl-epubReader-bookmarkContainer,
+.fl-epubReader-notesContainer {
+    width: 70.7%;
+    float: right;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.fl-epubReader-bookmarkContainer td,
+.fl-epubReader-notesContainer td {
+    /*background-color: #333333;*/
+    /*color: #ffffff;*/
+    border: none;
+}
+
+.fl-epubReader-bookmarkContainer th,
+.fl-epubReader-notesContainer th {
+    background-color: #f5f5f5;
+    color: #000;
+    border: none;
+}
+
+.flc-epubReader-addBookmark,
+.flc-epubReader-addNote {
+    float: left;
+    padding: 10px;
+    margin-left: 60px;
+    margin-top: 10px;
+    width: 100px;
+}
+
+.fl-epubReader-tocContainer * {
+    display: block;
+    text-align: center;
+}
+
+.flc-epubReader-nextButton,
+.flc-epubReader-previousButton,
+.flc-epubReader-nextChapterButton,
+.flc-epubReader-previousChapterButton {
+    width: 100px;
+    min-height: 50px;
+}
+
+.fl-epubReader-search-form {
+    display: inline-block;
+    zoom: 1; /* ie7 hack for display:inline-block */
+    *display: inline;
+    border: solid 1px #d2d2d2;
+    padding: 3px 5px;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+    -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 1px 0px rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 0px rgba(0, 0, 0, .1);
+    background: #f1f1f1;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+    background: -moz-linear-gradient(top, #fff, #ededed);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#ededed'); /* ie7 */
+    -ms-filter: progid: DXImageTransform . Microsoft . gradient(startColorstr = '#ffffff', endColorstr = '#ededed'); /* ie8 */
+}
+
+.fl-epubReader-search-form input {
+    font: normal 12px/100% Arial, Helvetica, sans-serif;
+}
+
+.fl-epubReader-search-form .flc-epubReader-search-field {
+    background: #fff;
+    padding: 6px 6px 6px 8px;
+    width: 202px;
+    border: solid 1px #bcbbbb;
+    outline: none;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.fl-epubReader-search-form .flc-epubReader-search-button {
+    color: #fff;
+    border: solid 1px #494949;
+    font-size: 11px;
+    height: 27px;
+    width: 27px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .6);
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+    background: #5f5f5f;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9e9e9e), to(#454545));
+    background: -moz-linear-gradient(top, #9e9e9e, #454545);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#9e9e9e', endColorstr = '#454545'); /* ie7 */
+    -ms-filter: progid: DXImageTransform . Microsoft . gradient(startColorstr = '#9e9e9e', endColorstr = '#454545'); /* ie8 */
+}
+
+.flc-epubReader-highlighted {
+    background-color: #ffff00 !important;
+}
+
+.flc-epubReader-highlighted-current {
+    background-color: #b8860b !important;
+}

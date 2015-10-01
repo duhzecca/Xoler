@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="css/images/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <script type="text/javascript" src="js/funcoes.js"></script>
+  </head>
+  <body>
+    <div id="cadastro">
+      <h1 style="text-align: center"><a href="#">XôLer</a></h1>
+      <div id="login-admin2">
+        <p><label style="margin-right: 50px">Administrador</label> <form method="get" action="validaLogin" style="text-align: right; margin-top: -20px;" ><input type="submit" value="Sair" onclick="validaLogin" style="font-size: 15px; margin-right: 120px; margin-top: 17px;"/><input type="hidden" name="acao" value="logout"/></form></p>
+      </div>
+      <br><br><br>
+      <label style="margin-left: 396px; font-size: 24px; color: #73c1e0;">Alteração do Livro X</label><br>
+      <form id="newUser" method="post" action="">
+        <table>
+          <tr><td></td><td style="text-align: left; color:#8A8A8A">(<font color="red">*</font>) - Campos obrigatórios.<input type="hidden" name="acao" id="acao" value="adicionar"/></td><td></td></tr>
+          <tr><td class="labelTd">Título: (<font color="red">*</font>)</td><td><input type="text" name="nome" size="40" id="pNome" value="Informe o título do livro" onfocus="EmptyField(this.id);" onblur="VerificaPNome(document.getElementById('pNome').value),EmptyField2(this.id)" onkeyup="VerificaPNome(document.getElementById('pNome').value);"/></td><td><div id="alertPNome"></div></td></tr>
+          <tr><td class="labelTd">Autor: (<font color="red">*</font>)  </td><td><input type="text" name="autor" size="40" id="autor" value="Informe o autor do livro" onfocus="EmptyField(this.id);" onblur="VerificaAutor(document.getElementById('autor').value),EmptyField2(this.id)" onkeyup="VerificaAutor(document.getElementById('autor').value);"/></td><td><div id="alertAutor"></div></td></tr>
+          <tr><td class="labelTd">Editora: (<font color="red">*</font>)</td><td><select name="editora" id="editora" onchange="VerificaEditora(document.getElementById('editora').value)">
+                        <option value="">Selecione a editora</option>
+                        <option value="masc">Pegar do BD</option>
+                        <option value="fem">Pegar do BD</option>
+                    </select></td><td><div id="alertEditora"></div></td></tr>        
+          <tr><td></td><td colspan="2" style="float: right; width: 280px; padding-top: 5px;"><a href="admin.html">&lt;&lt; Voltar à home</a> <a class="button" href="#"><span>Alterar</span></a></td></tr>
+        </table>
+      </form>
+      <br><br>
+    </div>
+  </body>
+</html>
